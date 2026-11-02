@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>커리큘럼 · S.T.A Track 3기 9주차</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--bg:#faf8fc;--card:#fff;--ink:#1f1a24;--sub:#615a6b;--line:#e4dceb;--soft:#f3edf8;--accent:#8a3fc0;--accent-ink:#fff;
+--code-bg:#1e1b26;--code-fg:#ece8f2;--chip:#efe6f7;--star:#c2410c;--d1:#8a3fc0;--d2:#1f6fd6;--d3:#c45a12;--note:#eef4fd;--note-line:#1f6fd6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141118;--card:#1d1922;--ink:#ece8f2;--sub:#a79fb3;--line:#332c3c;--soft:#241f2b;
+--accent:#c79af0;--accent-ink:#1a1220;--code-bg:#0f0d13;--code-fg:#ece8f2;--chip:#2c2435;--star:#fb923c;--d1:#c79af0;--d2:#6ea8ff;--d3:#f0a060;--note:#1a2333;--note-line:#6ea8ff}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,"Pretendard Variable",-apple-system,"Malgun Gothic",sans-serif;
+font-size:16px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1080px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:14px;height:56px}
+.brand{font-weight:800;white-space:nowrap;color:var(--ink);text-decoration:none;font-size:15px}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{white-space:nowrap;text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:6px 11px;border-radius:999px}
+nav.tabs a:hover,nav.tabs a.on{background:var(--chip);color:var(--ink)}
+main{max-width:1080px;margin:0 auto;padding:0 16px 80px}
+.hero{padding:44px 0 8px}.hero .kick{color:var(--accent);font-weight:700;font-size:14px;letter-spacing:.02em}
+.hero h1{font-size:clamp(26px,4.4vw,40px);line-height:1.25;margin:8px 0 10px;letter-spacing:-.01em}
+.hero p{color:var(--sub);margin:0}
+.pages{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}.pages a{text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.pages a.on{border-color:var(--accent);color:var(--accent)}
+section.sec{margin-top:40px}
+section.sec>h2{font-size:clamp(22px,3vw,28px);margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--ink);letter-spacing:-.01em}
+section.day>h2{border-bottom-color:var(--dc)}section.d1{--dc:var(--d1)}section.d2{--dc:var(--d2)}section.d3{--dc:var(--d3)}
+section.day>h2::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--dc);margin-right:10px;vertical-align:2px}
+.mod,.sub{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 22px 14px;margin:16px 0}
+.mod{border-left:5px solid var(--dc,var(--accent))}
+.mod h3,.sub h3{font-size:19px;margin:14px 0 6px}
+.sub{background:transparent;border:none;padding:0}
+h3{scroll-margin-top:70px}
+p,li{margin:6px 0}ul,ol{padding-left:22px}li>ul,li>ol{margin:4px 0}
+blockquote{margin:14px 0;padding:12px 16px;border-left:4px solid var(--note-line);background:var(--note);border-radius:0 10px 10px 0}
+blockquote p{margin:2px 0}
+code{font-family:"JetBrains Mono",Consolas,ui-monospace,monospace;font-size:.88em;background:var(--chip);padding:1px 6px;border-radius:5px;word-break:break-all}
+pre{background:var(--code-bg);color:var(--code-fg);padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.55;font-size:14px}
+pre code{background:none;padding:0;color:inherit;word-break:normal;white-space:pre}
+pre{position:relative;padding-right:72px}.cp{position:absolute;top:8px;right:8px;font:600 12px Pretendard,sans-serif;color:var(--code-fg);background:#ffffff1f;border:1px solid #ffffff33;border-radius:6px;padding:4px 9px;cursor:pointer}
+.cp:hover{background:#ffffff33}
+.tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:700;white-space:nowrap}tr:last-child td{border-bottom:none}
+td[align=right],th[align=right]{text-align:right}
+img{display:block;max-width:100%;height:auto;margin:10px 0 16px;border:1px solid var(--line);border-radius:8px}
+.star{color:var(--star)}hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+footer{max-width:1080px;margin:0 auto;padding:24px 16px 48px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+@media (max-width:640px){.mod{padding:4px 14px 10px}.bar{gap:8px}.brand{display:none}th,td{padding:8px 9px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar"><a class="brand" href="index.html">STA3 · 9주차</a><nav class="tabs"><a href="#s-과정-한눈에">과정 한눈에</a><a href="#s-day-1">Day 1</a><a href="#s-day-2">Day 2</a><a href="#s-day-3">Day 3</a><a href="#s-미니프로젝트-평가-11-06-금">미니프로젝트 평가</a><a href="#s-자주-묻는-질문">자주 묻는 질문</a><a href="#s-막혔을-때">막혔을 때</a></nav></div></header>
+<main>
+<div class="hero"><div class="kick">S.T.A Track 3기 · 9주차 · 11/03~11/05</div><h1>Slack · Claude Code · Tableau Cloud — 3일 실습 커리큘럼</h1>
+<div class="pages"><a href="index.html" class=on>커리큘럼</a><a href="webhook.html">Day 1 Webhook 안내</a><a href="vscode.html">VS Code 준비</a></div></div>
+
+<section class="sec" id="s-과정-한눈에"><h2 id="과정-한눈에">과정 한눈에</h2>
+<p><strong>S.T.A Track 3기 9주차</strong> · 11/03(화) ~ 11/05(목) 3일 · 매일 09:30~18:30 (점심 12:30~13:30) · 11/06(금) 발표회 · 강사 강승일</p>
+<p>3일 동안 만드는 것은 하나입니다.</p>
+<blockquote>
+<p><strong>월요일 아침마다, 숫자가 맞는지 AI가 한 번 더 검사한 지난주 지표가 내 Slack 채널에 알아서 올라온다.</strong></p>
+</blockquote>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>날</th>
+<th>주제</th>
+<th>하루 끝에 갖고 가는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Day 1</strong> 11/03(화)</td>
+<td><strong>Slack 기초</strong></td>
+<td>채널 4개 · 요청 양식 워크플로 · Webhook 2개 · 리포트 메시지 틀(Block Kit)</td>
+</tr>
+<tr>
+<td><strong>Day 2</strong> 11/04(수)</td>
+<td><strong>Claude · Claude Code</strong></td>
+<td><code>CLAUDE.md</code> · 주간지표 스킬 · 숫자검증 에이전트 · 명령 한 줄로 <code>#test</code> 게시</td>
+</tr>
+<tr>
+<td><strong>Day 3</strong> 11/05(목)</td>
+<td><strong>Tableau Cloud 연동</strong></td>
+<td>Tableau에서 읽어 <code>#alert</code> 에 올라오는 자동 리포트 · 미니프로젝트 요구사항</td>
+</tr>
+<tr>
+<td>11/06(금)</td>
+<td>발표회</td>
+<td>내 업무 하나를 같은 구조로 자동화한 결과</td>
+</tr>
+</tbody>
+</table></div>
+<div class="sub"><h3 id="파이프라인-4칸-뒤에서부터-쌓는다">파이프라인 4칸 — 뒤에서부터 쌓는다</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>칸</th>
+<th>하는 일</th>
+<th>만드는 날</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>트리거</td>
+<td>언제 시작하나</td>
+<td>Day 2 <code>claude -p</code> → Day 3 예약 실행</td>
+</tr>
+<tr>
+<td>조회</td>
+<td>어디서 가져오나</td>
+<td>Day 2 엑셀 → <strong>Day 3 Tableau Cloud</strong></td>
+</tr>
+<tr>
+<td>가공</td>
+<td>어떻게 바꾸나</td>
+<td>Day 2 Claude Code · 규칙 · 스킬 · 검증 에이전트</td>
+</tr>
+<tr>
+<td><strong>전달</strong></td>
+<td>어디로 보내나</td>
+<td><strong>Day 1 Slack</strong> · Webhook · Block Kit</td>
+</tr>
+</tbody>
+</table></div>
+<p>받을 곳(전달)이 먼저 있어야 만든 걸 바로 보낼 수 있고, 검증 규칙(가공)이 먼저 있어야 Tableau의 답(조회)을 의심할 수 있습니다.</p>
+</div><div class="sub"><h3 id="계정과-준비물">계정과 준비물</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>도구</th>
+<th>계정</th>
+<th>확인할 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slack</td>
+<td><strong>내 워크스페이스 <code>STA3-&lt;내 이름&gt;</code> + Pro 체험판</strong></td>
+<td>워크스페이스 이름 클릭 → 「Pro 체험판」 표시 · 종료일 메모</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>운영 측 제공 <strong>Team 플랜</strong> (claude.ai + Claude Code)</td>
+<td>Claude Code <code>/status</code> 가 <strong>Team 조직</strong></td>
+</tr>
+<tr>
+<td>Tableau Cloud</td>
+<td><strong>내 체험판 사이트</strong></td>
+<td><code>Sales</code> 프로젝트에 <code>SEILOneCompany_Sales데이터</code> 게시 · 행 수 11,000</td>
+</tr>
+<tr>
+<td>내 PC</td>
+<td>VS Code + Claude Code + Python(<code>pandas</code>·<code>openpyxl</code>)</td>
+<td><a href="vscode.html">VS Code 준비 안내</a> 8단계</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>작업 폴더</strong> — Windows <code>C:\STA3\&lt;이름&gt;\</code> · Mac <code>~/STA3/&lt;이름&gt;/</code> (이름은 영문). 실습 데이터 <code>SEILOneCompany_Sales데이터.xlsx</code> 를 이 폴더에 둡니다.</p>
+<blockquote>
+<p><strong>하지 말 것</strong> — 결제 수단 입력 · 회사 Slack·회사 Tableau·회사 실데이터 사용 · Webhook 주소·비밀번호를 채팅·캡처·깃허브에 올리기</p>
+</blockquote>
+</div><div class="sub"><h3 id="시간표">시간표</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>시각</th>
+<th>11/03(화) Slack 기초</th>
+<th>11/04(수) Claude · Claude Code</th>
+<th>11/05(목) Tableau Cloud 연동</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09:30</td>
+<td>M1 오프닝 · 3일 지도</td>
+<td>M10 Claude 지도 + Codex 매핑</td>
+<td>M18 Tableau MCP + 내 사이트 점검</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td>M2 채널 · 스레드 · 멘션</td>
+<td>〃</td>
+<td>M19 Tableau ↔ Slack 구독·알림</td>
+</tr>
+<tr>
+<td>10:30</td>
+<td>〃</td>
+<td>M11 Claude Code 첫 작업</td>
+<td>〃</td>
+</tr>
+<tr>
+<td>11:00</td>
+<td>M3 채널 설계</td>
+<td>〃</td>
+<td>M20 claude.ai × Tableau</td>
+</tr>
+<tr>
+<td>11:30</td>
+<td>〃</td>
+<td>M12 엑셀 5문항 → 검증표 <span class="star">★</span></td>
+<td>〃</td>
+</tr>
+<tr>
+<td>12:00</td>
+<td>M4 찾기 · 정리 · 알림</td>
+<td>〃</td>
+<td>M21 Claude Code에 Tableau MCP</td>
+</tr>
+<tr>
+<td>13:30</td>
+<td>M5 코드 없는 자동화</td>
+<td>M13 CLAUDE.md</td>
+<td>M22 자동 리포트 완성 <span class="star">★</span></td>
+</tr>
+<tr>
+<td>14:30</td>
+<td>M6 Slack AI · Slackbot</td>
+<td>M14 권한 · 플랜 모드</td>
+<td>〃</td>
+</tr>
+<tr>
+<td>15:00</td>
+<td>M7 게시용 앱 + Webhook <span class="star">★</span></td>
+<td>M15 스킬 「주간지표」 <span class="star">★</span></td>
+<td>M23 예약 실행과 실패 처리</td>
+</tr>
+<tr>
+<td>16:00</td>
+<td>〃</td>
+<td>〃</td>
+<td>M24 검증 · 보안 · 비용</td>
+</tr>
+<tr>
+<td>16:30</td>
+<td>M8 Block Kit 메시지</td>
+<td>M16 숫자검증 에이전트</td>
+<td>M25 미니프로젝트 착수 <span class="star">★</span></td>
+</tr>
+<tr>
+<td>17:30</td>
+<td>M9 정리 + 내일 준비</td>
+<td>M17 명령 한 줄 → <code>#test</code> 게시</td>
+<td>〃</td>
+</tr>
+<tr>
+<td>18:00</td>
+<td>〃</td>
+<td>〃</td>
+<td>M26 발표 안내</td>
+</tr>
+</tbody>
+</table></div>
+</div><div class="sub"><h3 id="하루-통과-기준">하루 통과 기준</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>날</th>
+<th>이게 되면 통과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11/03</td>
+<td>Webhook으로 <strong><code>#test-&lt;이름&gt;</code> 에 Block Kit 메시지가 올라왔다</strong></td>
+</tr>
+<tr>
+<td>11/04</td>
+<td>명령 한 줄 <code>claude -p</code> 로 <strong>주간지표가 <code>#test-&lt;이름&gt;</code> 에 올라왔고</strong>, 숫자가 정답과 같다</td>
+</tr>
+<tr>
+<td>11/05</td>
+<td>같은 명령이 <strong>Tableau Cloud에서 조회해</strong> <code>#alert-&lt;내주제&gt;</code> 에 올린다 + 미니프로젝트 요구사항 승인</td>
+</tr>
+</tbody>
+</table></div>
+</div></section><section class="sec day d1" id="s-day-1"><h2 id="day-1">Day 1 · 11/03(화) — Slack 기초</h2>
+<p><strong>오늘 목표</strong> — Slack을 「메신저」가 아니라 사람과 프로그램이 같이 일하는 곳으로 씁니다. 오늘 끝나면 프로그램이 내 채널에 글을 올립니다.</p>
+<p><strong>오늘 쓰는 안내</strong> — <a href="webhook.html">게시용 앱 · Webhook · Block Kit 안내</a> (화면 캡처 18장 · Windows/Mac 명령)</p>
+<div class="mod"><h3 id="m1-오프닝-3일-지도-09-30">M1. 오프닝 · 3일 지도 · 09:30</h3>
+<ul>
+<li><strong>목표</strong> — 3일이 파이프라인 4칸을 뒤에서부터 쌓는다는 것을 압니다</li>
+<li><strong>할 일</strong> — 워크스페이스 이름 클릭 → 「<strong>Pro 체험판</strong>」인지 확인. 무료로 보이면 이 자리에서 체험판을 시작합니다. <strong>카드 입력 화면이 나오면 멈추고 손을 듭니다.</strong> 체험판 종료일을 메모합니다</li>
+</ul>
+</div><div class="mod"><h3 id="m2-slack의-구조-채널-스레드-멘션-10-00">M2. Slack의 구조 — 채널 · 스레드 · 멘션 · 10:00</h3>
+<ul>
+<li><strong>핵심</strong> — Slack은 방이 사람이 아니라 <strong>주제</strong> 기준입니다. DM은 채널 밖이라 DM에서 내린 결정은 다른 사람도, AI도 못 찾습니다<ul>
+<li>한 주제는 한 스레드 · 채널 본문에는 새 주제만</li>
+<li>멘션의 세기 <code>@이름</code> &lt; <code>@here</code> &lt; <code>@channel</code> — <code>@channel</code> 은 아껴 씁니다</li>
+<li>「확인했습니다」 답장 대신 이모지 👀 → 🔄 → ✅</li>
+</ul>
+</li>
+<li><strong>실습 (40분, 짝)</strong><ol>
+<li>짝을 내 워크스페이스에 초대 (워크스페이스 이름 → 사람 초대 → 이메일)</li>
+<li>상대 <code>#general</code> 에 질문 1개 → 상대는 <strong>스레드로</strong> 답 → 「채널에도 보내기」 차이 확인</li>
+<li>이모지로 상태 3단계 표시</li>
+<li>「이번 주 할 일」을 굵은 제목 + 체크 목록 + 링크 1개로</li>
+<li>프로필 → 시간대 <strong>서울</strong> 확인</li>
+</ol>
+</li>
+<li><strong>흔한 실수</strong> — 회사 Slack 창에서 실습 → 왼쪽 위 이름이 <code>STA3-&lt;이름&gt;</code> 인지 먼저 봅니다</li>
+</ul>
+</div><div class="mod"><h3 id="m3-채널-설계-11-00">M3. 채널 설계 · 11:00</h3>
+<ul>
+<li>
+<p><strong>핵심</strong> — 채널 이름은 접두어로 성격을 말합니다 · <strong>공개가 기본</strong>(비공개는 검색도, AI도 못 읽습니다) · 캔버스 = 채널의 문서, 리스트 = 채널의 할 일</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>접두어</th>
+<th>용도</th>
+<th>이번 수업</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prj-</code></td>
+<td>프로젝트</td>
+<td><code>#prj-주간리포트</code></td>
+</tr>
+<tr>
+<td><code>data-</code></td>
+<td>데이터 질문·요청</td>
+<td><code>#data-질문</code></td>
+</tr>
+<tr>
+<td><code>alert-</code></td>
+<td>자동 알림 — 기계가 쓴다</td>
+<td><code>#alert-&lt;내주제&gt;</code></td>
+</tr>
+<tr>
+<td><code>test-</code></td>
+<td>실험 — 망가져도 된다</td>
+<td><code>#test-&lt;이름&gt;</code></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p><strong>실습 (40분)</strong></p>
+<ol>
+<li>채널 4개 만들기 — 설명 한 문장씩</li>
+<li><code>#prj-주간리포트</code> → <strong>채널 캔버스</strong>: 목적 / 대상 / 일정 11/03~06 / 내 Tableau 사이트 링크</li>
+<li>같은 채널에 <strong>리스트</strong> 「미니프로젝트 할 일」 5개 — 담당·기한·상태 열</li>
+<li><code>#data-질문</code> 에 양식 메시지 고정 — <code>[요청] 지표: / 기간: / 기한: / 설명:</code></li>
+<li>옆 사람 채널 목록만 보고 각 채널의 용도를 맞혀 봅니다</li>
+</ol>
+</li>
+<li><strong>산출물</strong> — 채널 4개 · 캔버스 · 리스트 · 고정 양식 (체험판이 끝나도 캔버스·리스트는 남습니다)</li>
+</ul>
+</div><div class="mod"><h3 id="m4-찾기-정리-알림-12-00">M4. 찾기 · 정리 · 알림 · 12:00</h3>
+<ul>
+<li><strong>핵심</strong> — 검색 한정어 <code>in:#채널</code> · <code>from:@사람</code> · <code>has:link</code> · <code>after:</code> · <code>before:</code> 를 하나씩 붙여 가며 좁힙니다. 한정어와 값 사이는 띄우지 않습니다(<code>from: @이름</code> ✕)</li>
+<li><strong>실습 (20분)</strong> — 짝 워크스페이스에서 「오전에 짝이 올린 링크」를 한정어 2개 이상으로 찾기 · <code>#alert-</code> 채널 알림을 「멘션만」으로 · 퇴근 후 방해 금지 예약</li>
+</ul>
+</div><div class="mod"><h3 id="m5-코드-없는-자동화-13-30">M5. 코드 없는 자동화 · 13:30</h3>
+<ul>
+<li><strong>핵심</strong> — 워크플로 = 트리거 + 단계. 내일 만들 4칸과 같은 모양입니다. 조건 분기·외부 데이터 조회·계산은 안 됩니다 — 여기서 막히는 것만 Claude Code로 넘깁니다</li>
+<li><strong>실습 1 (35분) — 「데이터 요청 접수」 워크플로</strong> · 따라 하기 영상 <a href="https://youtu.be/D4g3OFPBN94" target="_blank" rel="noopener">Slack 워크플로 빌더로 코드 없이 자동화 만들기 (3:44)</a><ol>
+<li><code>#data-질문</code> 채널 ⋮ → 워크플로 추가 → 처음부터 새로 만들기 → 트리거 「<strong>Slack의 링크에서</strong>」</li>
+<li>단계 ① 양식 — 요청자(사람) · 지표 · 기간 · 기한(날짜) · 설명, 필수 체크 (질문을 추가하면 앞 질문의 「필수」가 따라옵니다 — 설명은 풀어 줍니다)</li>
+<li>단계 ② 양식 응답을 <code>#data-질문</code> 에 메시지로 게시 (응답 값은 자동으로 채워집니다. 빠지면 「변수 삽입」)</li>
+<li>단계 ③ 나에게 DM</li>
+<li>게시 → 짝이 내 워크스페이스에서 한 번 접수해 봅니다</li>
+</ol>
+</li>
+<li><strong>실습 2 (15분) — 때가 되면 알리기</strong> · 따라 하기 영상 <a href="https://youtu.be/aOQ93bJlWjM" target="_blank" rel="noopener">Slack /remind · 예약 전송 (1:20)</a><ol>
+<li><code>/remind #alert-&lt;내주제&gt; "주간 지표 확인" every Monday at 9am</code> → <code>/remind list</code> (Slackbot이 「나에게만 표시」로 답합니다)</li>
+<li>보내기 ▾ → 「내일 오전 9:00」 → <code>#prj-주간리포트</code> 에 「Day 2 시작」 예약 전송 (확인·취소는 입력창 위 「모든 예약 메시지 보기」)</li>
+<li>나에게 리마인드 「Slack·Tableau 체험판 종료일 확인」 → 왼쪽 「해야 할 일」에 들어갑니다</li>
+</ol>
+</li>
+<li><strong>기억할 것</strong> — 워크플로는 <strong>체험판이 끝나면 멈춥니다.</strong> 그래서 매주 도는 리포트는 Webhook으로 만듭니다</li>
+<li><strong>막히면</strong> — 「워크플로 추가」가 안 보임 → Pro 체험판이 아닙니다 · 조건 분기·반복에 BUSINESS+ 표시 → 오늘은 쓰지 않습니다</li>
+</ul>
+</div><div class="mod"><h3 id="m6-slack-ai-slackbot-14-30">M6. Slack AI · Slackbot · 14:30</h3>
+<ul>
+<li><strong>핵심</strong> — AI 요약은 <strong>채널에 쌓인 것보다 좋아질 수 없습니다.</strong> DM에서 오간 결정, 본문에 흩어진 답장은 AI가 연결하지 못합니다</li>
+<li><strong>실습 (5분)</strong> — 내 채널에서 채널 요약 · 스레드 요약을 눌러 봅니다. 안 보이면 짝 화면으로 (체험판이 끝나면 사라지는 기능이라 과제에는 쓰지 않습니다)</li>
+</ul>
+</div><div class="mod"><h3 id="m7-게시용-앱-incoming-webhook-15-00">M7. 게시용 앱 + Incoming Webhook <span class="star">★</span> · 15:00</h3>
+<ul>
+<li><strong>핵심</strong> — 앱 = 워크스페이스에 들어온 「프로그램 사용자」, Webhook = 그 앱이 <strong>채널 1개</strong>에 글을 넣는 주소. <strong>Webhook 주소는 비밀번호입니다</strong> — 작업 폴더의 <code>.env</code> 에만 적습니다. 체험판이 끝나도 계속 됩니다</li>
+<li><strong>안내</strong> — <a href="webhook.html">게시용 앱 · Webhook · Block Kit 안내</a> 1절 · 따라 하기 영상 <a href="https://youtu.be/KiiFxRsJefM" target="_blank" rel="noopener">Slack Incoming Webhook 만들고 PowerShell로 첫 메시지 보내기 (3:19)</a></li>
+<li><strong>실습 (70분)</strong><ol>
+<li><code>api.slack.com/apps</code> → Create New App → <code>Blank app</code> → 이름 <code>Weekly Report</code>(한글은 에러) → 내 워크스페이스</li>
+<li>Incoming Webhooks 켜기 → <code>#test-&lt;이름&gt;</code> 용 1개 → <code>#alert-&lt;내주제&gt;</code> 용 1개</li>
+<li><code>.env</code> 에 저장 — <strong>명령을 먼저 붙여 넣고 → 멈추면 Slack에서 Copy → Enter</strong> (순서가 바뀌면 클립보드가 덮입니다)</li>
+<li>시험 게시 — Windows <code>Invoke-RestMethod</code> · Mac <code>curl</code></li>
+<li><code>#test</code> 와 <code>#alert</code> 둘 다 「webhook test」가 보이면 끝</li>
+</ol>
+</li>
+<li><strong>흔한 실수</strong> — 회사 워크스페이스에 앱을 만듦 · <code>.env</code> 가 <code>.env.txt</code> 로 저장됨(파일 확장명 보기 켜기)</li>
+</ul>
+</div><div class="mod"><h3 id="m8-block-kit-읽히는-메시지-16-30">M8. Block Kit — 읽히는 메시지 · 16:30</h3>
+<ul>
+<li><strong>핵심</strong> — 3초 안에 결론이 읽혀야 리포트입니다. 맨 위 <strong>주체 + 결론 숫자</strong>, 그 아래 근거 숫자, 맨 끝 <strong>출처 · 기준일 · 집계 기간</strong>. 증가 = 파랑 🔵 · 감소 = 빨강 🔴 (매출 같은 일반 지표 기준). 멘션은 넣지 않습니다</li>
+<li><strong>실습 (45분)</strong> — <a href="webhook.html">안내</a> 2절<ol>
+<li>Block Kit Builder에서 <code>header</code> · <code>section</code>(필드 2열) · <code>divider</code> · <code>context</code></li>
+<li>숫자 자리는 <code>{매출}</code> <code>{증감률}</code> 같은 자리표시자로</li>
+<li>JSON을 <strong>VS Code로</strong> 작업 폴더에 <code>slack_템플릿.json</code> 저장</li>
+<li>임의 숫자를 넣고 안내 2절 <strong>④</strong> 명령으로 <code>#test</code> 에 게시</li>
+<li>옆 사람에게 3초 보여 주고 결론을 말하게 합니다</li>
+</ol>
+</li>
+<li><strong>막히면</strong> — <a href="slack_template.json">강사 시안 JSON</a>을 받아 <code>slack_템플릿.json</code> 으로 저장하고 ④만 실행합니다</li>
+</ul>
+</div><div class="mod"><h3 id="m9-정리-내일-준비-17-30">M9. 정리 + 내일 준비 · 17:30</h3>
+<ul>
+<li><strong>오늘 만든 것</strong> — 채널 4개 · 캔버스·리스트 · 고정 양식 · 워크플로 · 예약 알림·예약 메시지 · <strong>Webhook 2개(<code>.env</code>)</strong> · <strong><code>slack_템플릿.json</code></strong> (<span class="star">★</span> 2개는 내일 꼭 필요합니다)</li>
+<li><strong>내일 준비 — VS Code 터미널에서 확인</strong> (<a href="vscode.html">VS Code 준비 안내</a>)<ol>
+<li>VS Code로 작업 폴더 열기 → <code>Ctrl + `</code> → <code>claude --version</code></li>
+<li><code>claude</code> → <code>/status</code> → <strong>Team 조직</strong>인가</li>
+<li>Windows <code>python -c "import pandas, openpyxl; print('pandas OK')"</code> · Mac은 <code>python3</code></li>
+<li>작업 폴더에 <code>SEILOneCompany_Sales데이터.xlsx</code> 가 있나</li>
+</ol>
+</li>
+<li><code>claude</code>·<code>python</code> 을 못 찾으면 <strong>VS Code를 완전히 껐다 켭니다</strong></li>
+</ul>
+</div><div class="sub"><h3 id="day-1_1">Day 1 따라 하기 영상</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>모듈</th>
+<th>영상</th>
+<th>길이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M5 실습 1</td>
+<td><a href="https://youtu.be/D4g3OFPBN94" target="_blank" rel="noopener">Slack 워크플로 빌더로 코드 없이 자동화 만들기</a></td>
+<td>3:44</td>
+</tr>
+<tr>
+<td>M5 실습 2</td>
+<td><a href="https://youtu.be/aOQ93bJlWjM" target="_blank" rel="noopener">Slack /remind · 예약 전송 — 매주 알림과 예약 메시지 1분 만에 설정하기</a></td>
+<td>1:20</td>
+</tr>
+<tr>
+<td>M7</td>
+<td><a href="https://youtu.be/KiiFxRsJefM" target="_blank" rel="noopener">Slack Incoming Webhook 만들고 PowerShell로 첫 메시지 보내기</a></td>
+<td>3:19</td>
+</tr>
+</tbody>
+</table></div>
+<p>음성 없이 화면 자막으로 따라 하는 영상입니다.</p>
+</div></section><section class="sec day d2" id="s-day-2"><h2 id="day-2">Day 2 · 11/04(수) — Claude · Claude Code</h2>
+<p><strong>오늘 목표</strong> — Claude Code에게 엑셀을 집계시키고, 틀리는 지점을 <strong>규칙(CLAUDE.md) · 레시피(스킬) · 다른 눈(서브에이전트)</strong> 으로 막습니다. 하루 끝에는 명령 한 줄로 검증된 리포트가 Slack에 올라갑니다.
+<strong>오늘은 Tableau를 쓰지 않습니다.</strong> 도구 하나를 익힐 때 변수는 하나만 둡니다. 데이터 출처는 내일 바꿉니다.</p>
+<div class="mod"><h3 id="m10-claude-지도-codex-매핑-claude-ai-맛보기-09-30">M10. Claude 지도 + Codex 매핑 + claude.ai 맛보기 · 09:30</h3>
+<ul>
+<li>
+<p><strong>핵심</strong> — claude.ai(채팅) / <strong>Claude Code</strong>(내 PC 폴더에서 파일을 읽고 쓰고 명령을 실행) / Slack 안의 Claude. 1~4주차에 배운 Codex와 개념이 같습니다</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Codex</th>
+<th>Claude Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGENTS.md</code></td>
+<td><code>CLAUDE.md</code></td>
+</tr>
+<tr>
+<td>Skills</td>
+<td><code>SKILL.md</code> 스킬</td>
+</tr>
+<tr>
+<td>Custom Agents</td>
+<td>서브에이전트</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>MCP</td>
+</tr>
+<tr>
+<td>하네스</td>
+<td>Hooks</td>
+</tr>
+<tr>
+<td>Cron</td>
+<td><code>claude -p</code> + OS 예약</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p><strong>오늘 새로 배우는 것 3개</strong> — CLAUDE.md로 함정 막기 · 스킬로 레시피 굳히기 · 검증을 다른 에이전트에게 맡기기</p>
+</li>
+<li><strong>실습 (25분)</strong> — claude.ai → 새 프로젝트 <code>STA3 실습</code> → 엑셀 업로드 → 「2026년 카테고리별 매출과 전년 대비 증감률」 → 답을 메모장에 남깁니다(M12에서 비교)</li>
+</ul>
+</div><div class="mod"><h3 id="m11-claude-code-첫-작업-10-30">M11. Claude Code 첫 작업 · 10:30</h3>
+<ul>
+<li><strong>핵심</strong> — 항상 <strong>작업 폴더에서</strong> 시작합니다 = VS Code 「폴더 열기」 → <code>Ctrl + `</code> 터미널 → <code>claude</code><ul>
+<li><code>@파일</code> 참조 · <code>Esc</code> 멈추기 · <code>Esc</code> 2번 되돌리기 · <code>/context</code> · <code>/clear</code> · <code>/compact</code> · <code>Shift+Tab</code> 모드 전환</li>
+</ul>
+</li>
+<li><strong>실습 (45분)</strong><ol>
+<li><code>/status</code> 로 Team 조직인지 확인</li>
+<li>「이 폴더의 파일 목록과 각각이 무엇인지 설명해줘」</li>
+<li>「<code>@SEILOneCompany_Sales데이터.xlsx</code> 의 시트·필드·행 수·기간을 표로 정리해 <code>데이터설명.md</code> 로 저장해줘」 — 권한 확인 창은 <strong>직접 읽고</strong> 허용합니다</li>
+<li>「구매일자 최댓값은? 오늘(11/04) 이후 날짜가 몇 행인가?」</li>
+<li><code>/context</code> 로 얼마나 찼는지 보고 <code>/clear</code></li>
+</ol>
+</li>
+<li><strong>산출물</strong> — <code>데이터설명.md</code></li>
+<li><strong>흔한 실수</strong> — 다른 폴더에서 켬 · VS Code 터미널이 <code>claude</code>·<code>python</code> 을 못 찾음(→ VS Code 완전 종료 후 재실행) · Windows 터미널이 PowerShell이 아님 · Mac은 <code>python3</code> · 한글 깨짐은 <code>python -X utf8</code></li>
+</ul>
+</div><div class="mod"><h3 id="m12-엑셀-5문항-검증표-11-30">M12. 엑셀 5문항 → 검증표 <span class="star">★</span> · 11:30</h3>
+<ul>
+<li><strong>목표</strong> — Claude Code의 답을 정답표와 대조하고, <strong>틀린 이유를 이름 붙여 말합니다</strong></li>
+<li><strong>질문 규칙</strong> — ① 질문 하나 = <code>/clear</code> 하나 ② 시트·필드 이름을 넣어서 ③ 집계해서 짧게(10행 이내) ④ 어떤 필드·집계·필터로 계산했는지 같이 적게 한다</li>
+<li><strong>5문항</strong><ol>
+<li>2026년 카테고리별 매출과 전년 대비 증감률</li>
+<li>배송타입별 평균 배송 소요일</li>
+<li>4년 누적 매출 상위 5명 고객과 매출</li>
+<li>2026년 월별 매출의 최고·최저 달</li>
+<li>시도별 주문 수 상위 3곳·하위 3곳</li>
+</ol>
+</li>
+<li><strong>실습 (45분)</strong><ol>
+<li>5문항을 하나씩 — 「답과 계산에 쓴 코드 요약을 <code>검증\질문1.md</code> … 로 저장해줘」</li>
+<li>정답표를 받아 <strong>검증표</strong> — 문항 / claude.ai 답(질문 1만) / Claude Code 답 / 정답 / 일치? / 다르면 왜?</li>
+<li>「다르면 왜?」는 정해진 말로 — 필터 누락 · 행 vs 고유 개수 · 집계 수준 혼동 · 지어내기 · 반올림 · 기타</li>
+</ol>
+</li>
+<li><strong>산출물</strong> — 검증표 1장 + <code>검증\</code> 폴더</li>
+</ul>
+</div><div class="mod"><h3 id="m13-claude-md-함정을-규칙으로-13-30">M13. CLAUDE.md — 함정을 규칙으로 · 13:30</h3>
+<ul>
+<li><strong>핵심</strong> — 계층(전역 <code>~/.claude/CLAUDE.md</code> · 프로젝트 · 하위 폴더) · <code>/init</code> 은 초안일 뿐 · 규칙은 「하지 마라」보다 <strong>「이렇게 해라」</strong> 로</li>
+<li><strong>실습 (45분)</strong> — 작업 폴더에 <code>CLAUDE.md</code></li>
+</ul>
+<pre><code class="language-markdown">## 대화 방식
+- 한국어로 답한다. 결론 먼저.
+
+## 실행 환경 (Windows 예시)
+- Windows PowerShell 5.1. `&amp;&amp;` 안 됨 → `; if ($?) { }`
+- 파이썬 한글 출력은 `python -X utf8`
+
+## 데이터 집계 규칙
+- (오전 검증표에서 내가 잡은 함정을 「이렇게 한다」 문장으로 하나씩)
+- 계산에 쓴 필드·집계·필터를 답 끝에 표로 적는다
+
+## 보고 규칙
+- 확인 못 한 수치는 &quot;확인 불가&quot;라고 쓴다. 출처와 기준일을 항상 적는다
+- 일반 KPI 색: 증가=파랑, 감소=빨강
+</code></pre>
+<p>Mac은 실행 환경 두 줄을 <code>- macOS 터미널(zsh)</code> · <code>- 파이썬은 python3</code> 으로 바꿉니다</p>
+<ul>
+<li><strong>실습 (10분)</strong> — 오전에 틀린 문항을 <code>/clear</code> 후 다시 → 검증표에 「규칙 후」 칸 추가</li>
+<li><strong>산출물</strong> — 내 <code>CLAUDE.md</code> · <strong>확인</strong> — 전후 차이를 말로 설명할 수 있는가. 차이가 없으면 규칙이 모호한 것입니다</li>
+</ul>
+</div><div class="mod"><h3 id="m14-권한-플랜-모드-14-30">M14. 권한 · 플랜 모드 · 14:30</h3>
+<ul>
+<li><strong>핵심</strong> — <strong>플랜 모드</strong>(<code>Shift+Tab</code>) — 계획을 먼저 받아 고치고 시작 · 「모두 허용」의 함정 · 되돌릴 수 없는 3종: 파일 삭제·덮어쓰기 / 외부 게시(Slack·메일) / git push</li>
+<li><strong>실습 (20분)</strong> — 작업 폴더 <code>.claude/settings.json</code>: 읽기·<code>python</code> 실행은 허용, <strong><code>.env</code> 읽기는 거부</strong>, Webhook 게시 명령은 매번 확인 → 「<code>.env</code> 내용을 보여줘」로 막히는지 확인 → 플랜 모드로 「검증표를 엑셀로 바꿔줘」 계획을 받아 한 줄 고치고 실행</li>
+</ul>
+</div><div class="mod"><h3 id="m15-스킬-주간지표-레시피-15-00">M15. 스킬 — 「주간지표」 레시피 <span class="star">★</span> · 15:00</h3>
+<ul>
+<li><strong>핵심</strong> — 매번 타이핑하던 질의를 스킬로 굳힙니다. <code>.claude/skills/&lt;이름&gt;/SKILL.md</code> · <code>name</code> 은 영문 소문자·숫자·하이픈만(<code>weekly-kpi</code>) · 마음에 안 들면 프롬프트가 아니라 <strong>스킬 파일을 고칩니다</strong></li>
+<li><strong>좋은 프롬프트 5칸으로 점검</strong> — 역할 · 맥락(<code>description</code>) · 작업(1~4절) · 형식(5절) · 예시</li>
+<li><strong>실습 (60분)</strong> — <code>.claude/skills/weekly-kpi/SKILL.md</code></li>
+</ul>
+<pre><code class="language-markdown">---
+name: weekly-kpi
+description: SEILOneCompany 매출 데이터에서 기준일 직전 주와 그 전주의 지표를 비교해 3줄 요약과 Slack 메시지를 만든다. &quot;주간지표&quot;를 요청하면 쓴다
+---
+
+## 1. 기간
+기준일이 없으면 오늘. 지난주 = 기준일 직전 월~일, 전주 = 그 앞 월~일
+
+## 2. 조회 (데이터 출처 — 이 절만 바꾸면 출처가 바뀐다)
+작업 폴더의 SEILOneCompany_Sales데이터.xlsx 를 Python으로 읽는다.
+두 주의 매출 · 주문 수 · 이익률, 카테고리별 매출. 집계 방식은 CLAUDE.md 규칙을 따른다
+
+## 3. 계산
+증감액·증감률. 전주가 0이면 &quot;비교 불가&quot;
+
+## 4. 자체 확인
+두 주의 행 수와 매출 합계를 다른 방법으로 한 번 더 구해 2번과 맞는지 본다. 안 맞으면 멈추고 알린다
+
+## 5. 출력
+- 리포트\YYMMDD_주간지표.md — 3줄 요약 + 출처·기준일·집계 기간
+- 리포트\YYMMDD_slack.json — slack_템플릿.json 의 자리표시자를 채운 것
+</code></pre>
+<ul>
+<li><strong>실습 (20분)</strong> — 기준일을 바꿔 2회(10/26 · 11/02) → 숫자는 바뀌고 형식은 같은지, 정답과 맞는지</li>
+<li><strong>산출물</strong> — 동작하는 <code>weekly-kpi</code> 스킬 · <strong>막히면</strong> 스킬이 안 불림 → 폴더 위치와 <code>name</code> 형식</li>
+</ul>
+</div><div class="mod"><h3 id="m16-숫자검증-서브에이전트-훅-16-30">M16. 「숫자검증」 서브에이전트 + 훅 · 16:30</h3>
+<ul>
+<li><strong>핵심</strong> — 만든 쪽이 자기 결과를 검토하면 놓칩니다. 검증은 <strong>다른 눈</strong>에게 맡깁니다. <code>/agents</code> 로 만듭니다</li>
+<li><strong>실습 (40분)</strong> — <code>.claude/agents/number-checker.md</code>. 역할 정의에 <strong>오늘 내가 잡은 함정을 체크리스트로</strong> 넣고, 결과는 <code>통과</code> 또는 <code>보류: 이유</code> 한 줄 → 스킬 결과를 넘겨 검증 → <strong>일부러 틀린 결과를 넣어</strong> 잡아내는지 확인</li>
+<li><strong>시연</strong> — 검증 결과가 <code>보류</code> 면 게시 명령을 막는 훅(3주차 하네스와 같은 개념)</li>
+<li><strong>산출물</strong> — <code>number-checker</code> 에이전트 + 「잡아냈다」 로그</li>
+</ul>
+</div><div class="mod"><h3 id="m17-명령-한-줄-test-게시-17-30">M17. 명령 한 줄 → <code>#test</code> 게시 · 17:30</h3>
+<ul>
+<li><strong>핵심</strong> — <code>claude -p "요청"</code> = 사람 없이 한 번 실행. 사람이 없으니 권한 확인 창에 걸리면 멈춥니다 → 이 실행에 필요한 도구만 허용합니다. 게시는 Python 스크립트(<code>post_slack.py</code>)로 OS 차이를 없앱니다</li>
+<li><strong>실습 (40분)</strong><ol>
+<li>「<code>post_slack.py</code> 를 만들어줘 — 인자로 json 파일과 채널(test/alert)을 받는다. URL은 <code>.env</code> 에서 읽고 화면에 출력하지 않는다」</li>
+<li>대화창에서 한 번: 「weekly-kpi 기준일 2026-11-02 → number-checker 통과 시에만 <code>#test</code> 에 게시, 보류면 보류 사유만 게시」</li>
+<li>같은 걸 터미널 한 줄로 — <code>claude -p</code> + 필요한 도구 허용</li>
+</ol>
+</li>
+<li><strong>통과 기준</strong> — 명령 한 줄로 올라오는가 · 숫자가 정답과 같은가 · 끝줄에 출처·기준일이 있는가</li>
+<li><strong>내일 준비</strong> — Tableau 체험판에 로그인되는지, 원본 행 수가 11,000인지</li>
+</ul>
+</div></section><section class="sec day d3" id="s-day-3"><h2 id="day-3">Day 3 · 11/05(목) — Tableau Cloud 연동</h2>
+<p><strong>오늘 목표</strong> — Tableau Cloud를 Slack과 Claude에 잇고, 어제 만든 스킬의 데이터 출처를 Tableau로 바꿔 자동 리포트를 완성합니다. 오후 끝에는 미니프로젝트 요구사항을 승인받습니다.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>트랙 A — 기본</th>
+<th>트랙 A′ — 클라우드 MCP가 막힐 때</th>
+<th>트랙 B — 체험판이 없거나 만료됐을 때</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>연결</td>
+<td>클라우드 MCP <code>https://mcp.tableau.com</code> + 로그인 허용</td>
+<td>로컬 Tableau MCP + 내 사이트 PAT</td>
+<td><strong>Day 2 엑셀 스킬 그대로</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>세 트랙 모두 질문·정답·Slack 출력은 같습니다.</p>
+<div class="mod"><h3 id="m18-tableau-mcp란-내-사이트-점검-09-30">M18. Tableau MCP란 + 내 사이트 점검 · 09:30</h3>
+<ul>
+<li><strong>핵심</strong> — MCP = AI가 Tableau에 붙는 커넥터. Tableau가 서버를 직접 운영해 <strong>설치·토큰 없이 로그인 허용만으로</strong> 붙습니다. <strong>AI가 보는 범위 = 내 Tableau 계정이 보는 범위</strong></li>
+<li><strong>실습 (15분)</strong> — <code>Sales</code> 프로젝트 <code>SEILOneCompany_Sales데이터</code> 행 수 11,000 확인 · 웹 작성으로 시연 대시보드 1개(월별 매출 라인) → <code>Sales</code> 에 게시</li>
+</ul>
+</div><div class="mod"><h3 id="m19-tableau-slack-구독-알림-10-00">M19. Tableau ↔ Slack 구독 · 알림 · 10:00</h3>
+<ul>
+<li><strong>핵심</strong> — 대시보드를 「사람이 열어 보는 것」에서 「채널로 찾아오는 것」으로 — 뷰 구독 · 데이터 기반 알림 · 링크 미리보기</li>
+<li><strong>실습 (40분)</strong><ol>
+<li>Tableau Cloud 내 사이트 → 설정 → 통합 → <strong>Slack 연결</strong> → 내 워크스페이스 → 허용. Slack 앱 디렉터리에서 <strong>Tableau 앱</strong> 추가 → 로그인</li>
+<li>시연 대시보드를 <code>#alert-&lt;내주제&gt;</code> 로 구독</li>
+<li>임계값 알림 1개 — 「일 매출이 X 이하면 알림」</li>
+<li>대시보드 링크를 채널에 붙여 미리보기 확인</li>
+</ol>
+</li>
+<li><strong>산출물</strong> — 알림이 <strong>실제로 채널에 도착한</strong> 스크린샷</li>
+<li><strong>흔한 실수</strong> — 회사 Slack을 골라 연결 · Tableau 앱을 채널에 초대 안 함</li>
+</ul>
+</div><div class="mod"><h3 id="m20-claude-ai-tableau-5문항-다시-묻기-11-00">M20. claude.ai × Tableau — 5문항 다시 묻기 · 11:00</h3>
+<ul>
+<li><strong>실습 (50분)</strong><ol>
+<li>claude.ai → 설정 → 커넥터 → <strong>「Tableau Cloud」</strong> → 연결 → 사이트 URI → 로그인 → 허용</li>
+<li>「내가 볼 수 있는 Tableau 데이터 원본 목록을 이름만」 → <code>SEILOneCompany_Sales데이터</code> 가 뜨면 연결된 것</li>
+<li>5문항 다시 · <strong>답 위의 도구 호출을 펼쳐 봅니다</strong> — 어떤 필드·집계·필터로 물었나</li>
+<li>어제 검증표에 「Tableau(claude.ai)」 칸 추가</li>
+</ol>
+</li>
+<li><strong>기억할 것</strong> — 데이터 출처가 바뀌어도 함정은 같습니다. 그래서 어제 만든 검증 에이전트를 그대로 씁니다</li>
+</ul>
+</div><div class="mod"><h3 id="m21-claude-code에-tableau-mcp-붙이기-12-00">M21. Claude Code에 Tableau MCP 붙이기 · 12:00</h3>
+<ul>
+<li><strong>실습 (25분)</strong><ol>
+<li>작업 폴더에서 <code>claude mcp add --transport http tableau https://mcp.tableau.com</code></li>
+<li>Claude Code 안에서 <code>/mcp</code> → tableau → 인증 → 브라우저에서 사이트 URI·로그인·허용 → <code>claude mcp list</code> 로 확인</li>
+<li>「SEILOneCompany_Sales데이터의 필드 목록과 타입을 표로」 → 「2026년 카테고리별 매출」 → 정답 대조</li>
+</ol>
+</li>
+<li><strong>막히면</strong> — 트랙 A′(로컬 MCP + PAT) → 트랙 B(어제 엑셀 스킬)</li>
+</ul>
+</div><div class="mod"><h3 id="m22-조회-칸-교체-자동-리포트-완성-13-30">M22. 조회 칸 교체 → 자동 리포트 완성 <span class="star">★</span> · 13:30</h3>
+<ul>
+<li><strong>실습 (75분)</strong><ol>
+<li><code>weekly-kpi</code> 의 <code>## 2. 조회</code> 절만 고칩니다 — 「Tableau MCP로 Sales 프로젝트의 SEILOneCompany_Sales데이터를 조회한다. 질의에 쓴 필드·집계·필터를 기록한다」. <strong>나머지 절은 한 글자도 바꾸지 않습니다</strong></li>
+<li>출력에 시연 대시보드 이미지(또는 링크) 추가</li>
+<li>기준일 11/02로 실행 → <strong>엑셀 버전 결과와 숫자가 같은지</strong> 대조</li>
+<li><code>number-checker</code> 통과 시에만 <code>#alert-&lt;내주제&gt;</code> 에, 보류면 <code>#test-&lt;이름&gt;</code> 에 보류 알림</li>
+<li><code>claude -p</code> 한 줄로 3회 연속 실행 → 같은 결과인지</li>
+</ol>
+</li>
+<li><strong>기억할 것</strong> — 조회 칸만 바꿨습니다. 회사 Tableau 주소로 바꿔도 똑같이 돕니다</li>
+<li><strong>통과 기준</strong> — 명령 한 줄로 <code>#alert-</code> 에 Tableau 기준 리포트가 올라오고, 엑셀 버전과 숫자가 같다</li>
+</ul>
+</div><div class="mod"><h3 id="m23-예약-실행과-실패-처리-15-00">M23. 예약 실행과 실패 처리 · 15:00</h3>
+<ul>
+<li><strong>핵심</strong> — <code>claude -p</code> 를 OS 예약에 겁니다. Windows는 <strong>작업 스케줄러</strong>(시작 위치 = 작업 폴더), Mac은 <code>crontab -e</code> 한 줄(<code>which claude</code> 로 확인한 <strong>절대 경로</strong>, 작업 폴더로 <code>cd</code> 후 실행). PC가 꺼져 있거나 잠자기면 그 회차는 건너뜁니다</li>
+<li><strong>조용한 실패가 최악입니다</strong> — 데이터 없음 → 「데이터 없음」 게시 / 인증 만료 → <code>#test</code> 알림 / 검증 실패 → 보류 + 알림</li>
+<li><strong>실습 (40분)</strong><ol>
+<li>주 1회(월 09:00) 예약 등록 → 수업에서는 <strong>5분 뒤 1회</strong>로 바꿔 실제로 도는 것을 봅니다</li>
+<li>일부러 실패 — Webhook 주소 한 글자 틀리게 / 데이터 없는 기준일 → 알림 도착 확인 → 원복</li>
+</ol>
+</li>
+<li><strong>산출물</strong> — 예약 1개 + 실패 알림 스크린샷</li>
+</ul>
+</div><div class="mod"><h3 id="m24-검증-보안-비용-16-00">M24. 검증 · 보안 · 비용 · 16:00</h3>
+<ul>
+<li><strong>검증</strong> — AI 숫자를 그대로 보고하지 않습니다. 확인 못 하면 「확인 불가」</li>
+<li><strong>보안</strong> — MCP는 내 권한으로 실제 데이터를 만집니다. Webhook 주소·PAT·비밀번호를 채팅·코드·깃허브에 올리지 않습니다. 사내 데이터는 회사 정책 먼저</li>
+<li><strong>비용</strong> — 원본을 통째로 읽히지 말고 <strong>집계 결과만</strong> 주고받습니다</li>
+<li><strong>실습 (10분)</strong> — 「우리 회사에서 쓴다면 무엇이 걸리나」 3줄 → 미니프로젝트 제출물에 넣습니다</li>
+</ul>
+</div><div class="mod"><h3 id="m25-미니프로젝트-착수-16-30">M25. 미니프로젝트 착수 <span class="star">★</span> · 16:30</h3>
+<ul>
+<li><strong>목표</strong> — 주제를 고르고 요구사항을 승인받고, <strong>오늘 안에 내 데이터로 조회 1건</strong>을 돌립니다</li>
+<li>
+<p><strong>과제 메뉴</strong> — 입력은 내 해커톤 데이터 또는 SEIL 데이터</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>과제</th>
+<th>4칸 요약</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><strong>주간 지표 리포트 봇</strong></td>
+<td>매주 월요일 → 지난주·전주 지표 → 증감 + 3줄 요약 → 채널 (전원 완주 최저선)</td>
+</tr>
+<tr>
+<td>B</td>
+<td><strong>임계값 이상 알림</strong></td>
+<td>매일 → 핵심 지표 → 기준 이탈 시 원인 차원 상위 3개 → 알림</td>
+</tr>
+<tr>
+<td>C</td>
+<td><strong>데이터 요청 응답</strong></td>
+<td>M5 워크플로로 접수된 요청 → 조회 → 검증 → 답 게시</td>
+</tr>
+<tr>
+<td>D</td>
+<td><strong>데이터 품질 점검</strong></td>
+<td>새 데이터 → 행 수·결측·이상치·미래 날짜 점검 → 결과 게시</td>
+</tr>
+</tbody>
+</table></div>
+<p>메뉴 밖 주제도 됩니다 — 반복되는가 / 데이터가 지금 있는가 / 하루 안에 끝나는가. 내 데이터가 없으면 강사가 나눠 주는 공개 데이터(금융 시세 · 환율 · 기상)를 씁니다
+- <strong>실습</strong>
+1. (20분) 후보 → 기준 3개로 1개 확정
+2. (25분) <code>요구사항.md</code> 1장 — 4칸 + 칸별 「실패하면?」 + <strong>지금 몇 분 / 자동화 후 몇 분</strong> + 성공 기준 한 문장 + 검증 방법
+3. (30분) 강사 승인 — 인당 2분
+4. (15분) 승인받은 사람부터 내 데이터에 첫 조회 1건
+- <strong>산출물</strong> — 승인된 <code>요구사항.md</code>(<code>#prj-주간리포트</code> 에 올려 고정) + 첫 조회 결과</p>
+</li>
+</ul>
+</div><div class="mod"><h3 id="m26-발표-안내-18-00">M26. 발표 안내 · 18:00</h3>
+<ul>
+<li><strong>11/06 발표</strong> — 3분: 문제 → 4칸 → 데모 → Before/After(몇 분이 몇 분이 됐나) → 검증 방법</li>
+<li><strong>제출물</strong> — 코드·설정(<strong>Webhook 주소·토큰 지움</strong>) · 데모 캡처 · README 1장 · 보안 체크 3줄</li>
+<li><strong>데모 화면 녹화를 11/05 밤 안에 남깁니다</strong> — 체험판이 끝나면 다시 돌릴 수 없습니다</li>
+<li><strong>막혔을 때 첫 수</strong> — 에러 메시지를 <strong>그대로</strong> 붙여 넣습니다</li>
+</ul>
+</div></section><section class="sec" id="s-미니프로젝트-평가-11-06-금"><h2 id="미니프로젝트-평가-11-06-금">미니프로젝트 평가 · 11/06(금)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: right;">배점</th>
+<th>무엇을 보는가</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>문제 선정의 현실성</td>
+<td style="text-align: right;">30</td>
+<td>실제로 반복되는 업무인가, 내 직무와 붙어 있는가</td>
+</tr>
+<tr>
+<td>동작 완성도</td>
+<td style="text-align: right;">30</td>
+<td>처음부터 끝까지 돌아가는가, 다시 돌려도 같은가</td>
+</tr>
+<tr>
+<td><strong>검증 절차</strong></td>
+<td style="text-align: right;">20</td>
+<td>숫자가 맞다는 걸 어떻게 확인했나, <strong>실패를 잡아내는가</strong></td>
+</tr>
+<tr>
+<td>재사용 가능성</td>
+<td style="text-align: right;">20</td>
+<td>README·설정 분리, 남이 가져다 쓸 수 있는가</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class="sec" id="s-자주-묻는-질문"><h2 id="자주-묻는-질문">자주 묻는 질문</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>질문</th>
+<th>답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>claude.ai로 되는데 왜 Claude Code를 또 배우나요?</td>
+<td>채팅창은 묻고 끝납니다. Claude Code는 <strong>파일로 남고, 반복되고, Slack과 이어집니다</strong></td>
+</tr>
+<tr>
+<td>Codex랑 뭐가 다른가요?</td>
+<td>개념은 같습니다. 새로 배우는 건 3개뿐입니다(M10)</td>
+</tr>
+<tr>
+<td>Day 2에 왜 Tableau를 안 쓰나요?</td>
+<td>도구 하나 배울 때 변수는 하나. 엑셀로 만든 스킬은 조회 절만 바꾸면 Tableau로 갑니다 — 그게 Day 3입니다</td>
+</tr>
+<tr>
+<td>토큰(PAT)은 안 만들어도 되나요?</td>
+<td>클라우드 MCP는 로그인 허용으로 출입증을 받습니다. PAT는 트랙 A′에서만 씁니다</td>
+</tr>
+<tr>
+<td>AI가 낸 숫자를 믿어도 되나요?</td>
+<td>믿지 않습니다. 검증표가 증거입니다. <strong>못 믿는 걸 전제로 검증을 설계하는 게 실무입니다</strong></td>
+</tr>
+<tr>
+<td>회사에서 Slack을 안 써요</td>
+<td>배운 건 4칸입니다. 전달 칸만 Teams·메일로 바꾸면 됩니다</td>
+</tr>
+<tr>
+<td>Slack AI 요약이 제 화면엔 없어요</td>
+<td>체험판마다 다를 수 있습니다. 짝 화면으로 보면 됩니다. 과제에는 쓰지 않습니다</td>
+</tr>
+<tr>
+<td>체험판이 끝나면 다 없어지나요?</td>
+<td><strong>Slack</strong> — 무료로 돌아갑니다. 메시지·캔버스는 남고 워크플로는 멈춥니다. Webhook 리포트는 계속 됩니다. <strong>Tableau</strong> — 연결·예약 리포트가 멈춥니다. <strong>코드·스킬·CLAUDE.md·녹화는 내 PC에 남습니다</strong></td>
+</tr>
+</tbody>
+</table></div>
+</section><section class="sec" id="s-막혔을-때"><h2 id="막혔을-때">막혔을 때</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>증상</th>
+<th>먼저 확인할 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slack 게시가 안 된다</td>
+<td>Webhook이 그 채널용인가 · 주소 앞뒤 공백 · <code>.env</code> 파일명 · 회사 워크스페이스에 앱을 만들지 않았나</td>
+</tr>
+<tr>
+<td>워크플로·캔버스 만들기 메뉴가 없다</td>
+<td>Pro 체험판이 걸렸나(워크스페이스 이름 → 플랜) · 체험판이 끝났나</td>
+</tr>
+<tr>
+<td>VS Code 터미널에서 <code>claude</code>·<code>python</code> 을 못 찾는다</td>
+<td><strong>VS Code 완전 종료 후 다시 실행</strong> · Windows는 터미널이 PowerShell인지(<code>PS</code>)</td>
+</tr>
+<tr>
+<td><code>python</code> 을 치면 Microsoft Store가 열린다</td>
+<td>파이썬이 없습니다 — <code>winget install Python.Python.3.12</code> → VS Code 재실행</td>
+</tr>
+<tr>
+<td>한글이 깨진다</td>
+<td>Windows <code>python -X utf8</code></td>
+</tr>
+<tr>
+<td>Block Kit 게시가 <code>invalid_payload</code></td>
+<td>JSON 쉼표·괄호 오타 → Block Kit Builder에 붙여 확인. Windows는 <a href="webhook.html">안내</a> 2절 ④ 명령으로</td>
+</tr>
+<tr>
+<td>스킬이 안 불린다</td>
+<td><code>.claude/skills/&lt;이름&gt;/SKILL.md</code> 위치 · <code>name</code> 이 영문 소문자·하이픈인가</td>
+</tr>
+<tr>
+<td>숫자가 정답과 다르다</td>
+<td>기간 필터 · 기준일 이후 행 · 행 수 vs 고유 개수 · 합계 비율 vs 평균 · 반올림</td>
+</tr>
+<tr>
+<td>Tableau 로그인 창이 안 뜬다</td>
+<td>팝업 허용 · 기본 브라우저 · 다른 네트워크</td>
+</tr>
+<tr>
+<td>「원본이 없다」고 한다</td>
+<td>원본 이름 <code>SEILOneCompany_Sales데이터</code> 그대로인가 · 다른 사이트 URI로 로그인하지 않았나</td>
+</tr>
+<tr>
+<td>Claude Code에서 MCP가 안 붙는다</td>
+<td><code>/mcp</code> 상태 → 재인증 · 재시작 → 트랙 A′ 또는 B</td>
+</tr>
+<tr>
+<td>갑자기 조회가 전부 실패한다</td>
+<td><strong>체험판 만료</strong> — 사이트 접속부터. 끝났으면 트랙 B</td>
+</tr>
+<tr>
+<td><code>claude -p</code> 가 멈춘다 / 예약이 안 돈다</td>
+<td>허용 도구 목록 · <code>claude</code> 절대 경로(Mac) · 작업 스케줄러 시작 위치 · PC 잠자기</td>
+</tr>
+<tr>
+<td>답이 자꾸 헤맨다</td>
+<td>대화가 길어져 꼬인 것 → <code>/clear</code></td>
+</tr>
+<tr>
+<td>무엇을 물어야 할지 모르겠다</td>
+<td><strong>에러 메시지를 그대로 붙여 넣습니다</strong></td>
+</tr>
+</tbody>
+</table></div></section>
+</main>
+<footer>S.T.A Track 3기 9주차 수강생용 · 기준 2026.11.02 · 수업 중 바뀌는 내용은 강사 안내를 따릅니다</footer>
+<script>
+const links=[...document.querySelectorAll('nav.tabs a')];const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(s=>io.observe(s));
+document.querySelectorAll('pre').forEach(pre=>{const b=document.createElement('button');b.className='cp';b.type='button';b.textContent='복사';
+b.onclick=async()=>{try{await navigator.clipboard.writeText(pre.innerText.replace(/\n?복사(됨)?$/,''));b.textContent='복사됨';setTimeout(()=>b.textContent='복사',1500)}catch(e){b.textContent='직접 선택'}};pre.appendChild(b)});
+</script>
+</body>
+</html>

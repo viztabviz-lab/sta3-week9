@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>VS Code 준비 · S.T.A Track 3기 9주차</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--bg:#faf8fc;--card:#fff;--ink:#1f1a24;--sub:#615a6b;--line:#e4dceb;--soft:#f3edf8;--accent:#8a3fc0;--accent-ink:#fff;
+--code-bg:#1e1b26;--code-fg:#ece8f2;--chip:#efe6f7;--star:#c2410c;--d1:#8a3fc0;--d2:#1f6fd6;--d3:#c45a12;--note:#eef4fd;--note-line:#1f6fd6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141118;--card:#1d1922;--ink:#ece8f2;--sub:#a79fb3;--line:#332c3c;--soft:#241f2b;
+--accent:#c79af0;--accent-ink:#1a1220;--code-bg:#0f0d13;--code-fg:#ece8f2;--chip:#2c2435;--star:#fb923c;--d1:#c79af0;--d2:#6ea8ff;--d3:#f0a060;--note:#1a2333;--note-line:#6ea8ff}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,"Pretendard Variable",-apple-system,"Malgun Gothic",sans-serif;
+font-size:16px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1080px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:14px;height:56px}
+.brand{font-weight:800;white-space:nowrap;color:var(--ink);text-decoration:none;font-size:15px}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{white-space:nowrap;text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:6px 11px;border-radius:999px}
+nav.tabs a:hover,nav.tabs a.on{background:var(--chip);color:var(--ink)}
+main{max-width:1080px;margin:0 auto;padding:0 16px 80px}
+.hero{padding:44px 0 8px}.hero .kick{color:var(--accent);font-weight:700;font-size:14px;letter-spacing:.02em}
+.hero h1{font-size:clamp(26px,4.4vw,40px);line-height:1.25;margin:8px 0 10px;letter-spacing:-.01em}
+.hero p{color:var(--sub);margin:0}
+.pages{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}.pages a{text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.pages a.on{border-color:var(--accent);color:var(--accent)}
+section.sec{margin-top:40px}
+section.sec>h2{font-size:clamp(22px,3vw,28px);margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--ink);letter-spacing:-.01em}
+section.day>h2{border-bottom-color:var(--dc)}section.d1{--dc:var(--d1)}section.d2{--dc:var(--d2)}section.d3{--dc:var(--d3)}
+section.day>h2::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--dc);margin-right:10px;vertical-align:2px}
+.mod,.sub{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 22px 14px;margin:16px 0}
+.mod{border-left:5px solid var(--dc,var(--accent))}
+.mod h3,.sub h3{font-size:19px;margin:14px 0 6px}
+.sub{background:transparent;border:none;padding:0}
+h3{scroll-margin-top:70px}
+p,li{margin:6px 0}ul,ol{padding-left:22px}li>ul,li>ol{margin:4px 0}
+blockquote{margin:14px 0;padding:12px 16px;border-left:4px solid var(--note-line);background:var(--note);border-radius:0 10px 10px 0}
+blockquote p{margin:2px 0}
+code{font-family:"JetBrains Mono",Consolas,ui-monospace,monospace;font-size:.88em;background:var(--chip);padding:1px 6px;border-radius:5px;word-break:break-all}
+pre{background:var(--code-bg);color:var(--code-fg);padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.55;font-size:14px}
+pre code{background:none;padding:0;color:inherit;word-break:normal;white-space:pre}
+pre{position:relative;padding-right:72px}.cp{position:absolute;top:8px;right:8px;font:600 12px Pretendard,sans-serif;color:var(--code-fg);background:#ffffff1f;border:1px solid #ffffff33;border-radius:6px;padding:4px 9px;cursor:pointer}
+.cp:hover{background:#ffffff33}
+.tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:700;white-space:nowrap}tr:last-child td{border-bottom:none}
+td[align=right],th[align=right]{text-align:right}
+img{display:block;max-width:100%;height:auto;margin:10px 0 16px;border:1px solid var(--line);border-radius:8px}
+.star{color:var(--star)}hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+footer{max-width:1080px;margin:0 auto;padding:24px 16px 48px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+@media (max-width:640px){.mod{padding:4px 14px 10px}.bar{gap:8px}.brand{display:none}th,td{padding:8px 9px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar"><a class="brand" href="index.html">STA3 · 9주차</a><nav class="tabs"><a href="#s-한눈에-보는-체크리스트">한눈에 보는 체크리스트</a><a href="#s-1-vs-code-설치-5분">1. VS Code 설치</a><a href="#s-2-작업-폴더를-vs-code로-열기-2분">2. 작업 폴더를 VS Code로 열기</a><a href="#s-3-vs-code-안에서-터미널-열기-2분">3. VS Code 안에서 터미널 열기</a><a href="#s-4-터미널에서-claude-실행-확인-5분">4. 터미널에서 claude 실행 확인</a><a href="#s-5-로그인-계정-확인-2분">5. 로그인 계정 확인</a><a href="#s-6-화면-설정-2가지-3분">6. 화면 설정 2가지</a><a href="#s-7-시험-질문-1개-2분">7. 시험 질문 1개</a><a href="#s-8-파이썬-엑셀-패키지-10분">8. 파이썬 + 엑셀 패키지</a><a href="#s-선택-claude-code-확장-프로그램">선택</a><a href="#s-막혔을-때">막혔을 때</a><a href="#s-하지-말-것">하지 말 것</a></nav></div></header>
+<main>
+<div class="hero"><div class="kick">S.T.A Track 3기 · 9주차 · 11/03~11/05</div><h1>VS Code에서 Claude Code 쓰기 — 사전 필수 준비</h1>
+<div class="pages"><a href="index.html">커리큘럼</a><a href="webhook.html">Day 1 Webhook 안내</a><a href="vscode.html" class=on>VS Code 준비</a></div></div>
+
+<p><strong>11월 04일(수) Claude Code 수업 전까지</strong> 끝내 주세요. 약 30분이면 됩니다(파이썬이 이미 있으면 20분).
+Claude Code 설치·로그인을 끝낸 상태를 전제로 합니다. <a href="index.html">커리큘럼으로 돌아가기</a></p>
+<p>수업에서는 <strong>VS Code 화면 하나</strong>에 왼쪽 파일 목록과 아래쪽 터미널을 띄워 두고, 그 터미널에서 <code>claude</code> 를 실행합니다.
+Claude Code가 만든 파일이 왼쪽에 바로 나타나기 때문에, 무엇이 생기고 바뀌었는지 눈으로 확인하면서 따라올 수 있습니다.</p>
+<hr />
+<section class="sec" id="s-한눈에-보는-체크리스트"><h2 id="한눈에-보는-체크리스트">한눈에 보는 체크리스트</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>할 일</th>
+<th>시간</th>
+<th>완료 확인</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>VS Code 설치</td>
+<td>5분</td>
+<td>VS Code가 열린다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>작업 폴더를 VS Code로 열기</td>
+<td>2분</td>
+<td>왼쪽에 <code>STA3\&lt;이름&gt;</code> 폴더의 파일이 보인다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>VS Code 안에서 터미널 열기</td>
+<td>2분</td>
+<td>Windows는 <code>PS C:\STA3\&lt;이름&gt;&gt;</code> · Mac은 <code>~/STA3/&lt;이름&gt;</code> 이 보인다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>터미널에서 <code>claude</code> 실행 확인</td>
+<td>5분</td>
+<td><code>claude --version</code> 결과에 버전 숫자가 나온다</td>
+</tr>
+<tr>
+<td>5</td>
+<td>로그인 계정 확인</td>
+<td>2분</td>
+<td><code>/status</code> 결과가 <strong>Team 조직</strong>이다</td>
+</tr>
+<tr>
+<td>6</td>
+<td>화면 설정 2가지</td>
+<td>3분</td>
+<td>자동 저장 켜짐 · 터미널 글씨가 잘 보인다</td>
+</tr>
+<tr>
+<td>7</td>
+<td>시험 질문 1개</td>
+<td>2분</td>
+<td>Claude가 내 폴더 파일 목록을 답한다</td>
+</tr>
+<tr>
+<td>8</td>
+<td>파이썬 + 엑셀 패키지</td>
+<td>10분</td>
+<td>버전 숫자 확인 · <code>pandas OK</code> 가 나온다</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="sec" id="s-1-vs-code-설치-5분"><h2 id="1-vs-code-설치-5분">1. VS Code 설치 (5분)</h2>
+<p><code>https://code.visualstudio.com</code> → 「Download」</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Windows</th>
+<th>Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>받을 파일</td>
+<td><strong>User Installer (x64)</strong></td>
+<td><strong>Mac Universal</strong> (zip)</td>
+</tr>
+<tr>
+<td>설치</td>
+<td>받은 파일 실행 → 기본값으로 「다음」</td>
+<td>zip을 풀면 생기는 <code>Visual Studio Code</code> 앱을 <strong>응용 프로그램(Applications) 폴더로 끌어다 놓기</strong></td>
+</tr>
+<tr>
+<td>설치 중 체크</td>
+<td>「PATH에 추가」 <strong>켠 상태 그대로</strong> · 「Code(으)로 열기」 작업 두 개도 켜 두면 편합니다</td>
+<td>—</td>
+</tr>
+<tr>
+<td>첫 실행</td>
+<td>시작 메뉴 → 「Visual Studio Code」</td>
+<td>응용 프로그램 폴더에서 실행 → 「인터넷에서 다운로드한 앱입니다」 창 → <strong>열기</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Mac은 다운로드 폴더에서 바로 실행하지 마세요. 업데이트와 권한이 꼬입니다</li>
+<li>한국어 화면이 좋으면 오른쪽 아래 「언어 팩 설치」 알림 → 설치 → 다시 시작 (선택)</li>
+</ul>
+<p><strong>Mac만 추가로</strong> — <code>⌘ + Shift + P</code> → <code>shell command</code> 입력 → <strong>「Shell Command: Install 'code' command in PATH」</strong> 클릭
+(터미널에서 <code>code .</code> 로 현재 폴더를 VS Code로 열 수 있게 됩니다)</p>
+</section><section class="sec" id="s-2-작업-폴더를-vs-code로-열기-2분"><h2 id="2-작업-폴더를-vs-code로-열기-2분">2. 작업 폴더를 VS Code로 열기 (2분)</h2>
+<ol>
+<li>메뉴 「파일(File) → 폴더 열기(Open Folder)」</li>
+<li>작업 폴더 선택
+   - Windows <code>C:\STA3\&lt;이름&gt;\</code> · Mac <code>~/STA3/&lt;이름&gt;/</code></li>
+<li>「이 폴더에 있는 파일의 작성자를 신뢰합니까?」 → <strong>「예, 작성자를 신뢰합니다」</strong></li>
+<li><strong>완료 확인</strong> — 왼쪽 탐색기에 <code>SEILOneCompany_Sales데이터.xlsx</code> 와 해커톤 <code>.twbx</code> 가 보인다</li>
+</ol>
+<blockquote>
+<p>매 수업 시작할 때 <strong>이 폴더를 먼저 열고</strong> 시작합니다. 다른 폴더(바탕화면·다운로드)를 연 채로 Claude Code를 실행하면 엉뚱한 곳에 파일이 생깁니다.</p>
+</blockquote>
+</section><section class="sec" id="s-3-vs-code-안에서-터미널-열기-2분"><h2 id="3-vs-code-안에서-터미널-열기-2분">3. VS Code 안에서 터미널 열기 (2분)</h2>
+<ul>
+<li>메뉴 「터미널(Terminal) → 새 터미널(New Terminal)」 또는 단축키 <code>Ctrl + `</code> (Mac도 ⌘가 아니라 <strong>Ctrl</strong>)</li>
+<li>아래쪽에 터미널 창이 열립니다. 맨 앞 글자를 확인하세요</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>이렇게 보이면 정상</th>
+<th>다르게 보이면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td><code>PS C:\STA3\gildong&gt;</code></td>
+<td>앞에 <code>PS</code> 가 없다(명령 프롬프트) → 터미널 창 오른쪽 위 <code>+</code> 옆 <code>˅</code> → <strong>PowerShell</strong> 선택</td>
+</tr>
+<tr>
+<td>Mac</td>
+<td><code>gildong@MacBook gildong %</code></td>
+<td><code>bash-3.2$</code> 처럼 나온다 → 그대로 써도 되지만 <code>˅</code> → <strong>zsh</strong> 선택 권장</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>경로가 작업 폴더가 아니면 2번(폴더 열기)을 다시 합니다</li>
+</ul>
+</section><section class="sec" id="s-4-터미널에서-claude-실행-확인-5분"><h2 id="4-터미널에서-claude-실행-확인-5분">4. 터미널에서 <code>claude</code> 실행 확인 (5분)</h2>
+<p>VS Code 터미널에 입력합니다.</p>
+<pre><code>claude --version
+</code></pre>
+<ul>
+<li><strong>버전 숫자가 나오면 성공</strong></li>
+<li><strong>「claude 을(를) 찾을 수 없습니다」 / <code>command not found: claude</code></strong> 가 나오면
+  1. <strong>VS Code를 완전히 종료</strong>했다가 다시 엽니다 (Windows는 창 닫기, Mac은 <code>⌘ + Q</code>)
+     — Claude Code를 VS Code보다 나중에 설치하면, 이미 열려 있던 VS Code는 새 설치를 모릅니다. 가장 흔한 원인입니다
+  2. 그래도 안 되면 Claude Code 설치 명령(Windows <code>irm https://claude.ai/install.ps1 | iex</code> · Mac <code>curl -fsSL https://claude.ai/install.sh | bash</code>)을 <strong>VS Code 터미널에서</strong> 한 번 더 실행 → VS Code 다시 종료·실행
+  3. 그래도 안 되면 화면을 캡처해 두세요. 수업 시작 전에 도와드립니다</li>
+</ul>
+</section><section class="sec" id="s-5-로그인-계정-확인-2분"><h2 id="5-로그인-계정-확인-2분">5. 로그인 계정 확인 (2분)</h2>
+<pre><code>claude
+</code></pre>
+<ol>
+<li>처음이면 「이 폴더를 신뢰합니까?」 → <strong>Yes</strong></li>
+<li>로그인을 묻으면 <strong>「Claude account with subscription」</strong> → 브라우저에서 <strong>Team 조직</strong> 선택 → 허용</li>
+<li>Claude Code 안에서 <code>/status</code> 입력 → 로그인 계정이 <strong>Team 조직</strong>인지 확인
+   - 개인 Pro·무료 계정이면 <code>/logout</code> → <code>claude</code> 다시 실행 → Team 조직으로 로그인</li>
+<li>나갈 때는 <code>/exit</code> (또는 <code>Ctrl + C</code> 두 번)</li>
+</ol>
+</section><section class="sec" id="s-6-화면-설정-2가지-3분"><h2 id="6-화면-설정-2가지-3분">6. 화면 설정 2가지 (3분)</h2>
+<ol>
+<li><strong>자동 저장 켜기</strong> — 메뉴 「파일(File) → 자동 저장(Auto Save)」에 체크
+   - Claude Code가 고친 파일과 내가 VS Code에서 고친 파일이 엇갈리지 않게 합니다</li>
+<li><strong>터미널 글씨 키우기</strong> — 설정(Windows <code>Ctrl + ,</code> · Mac <code>⌘ + ,</code>) → 검색창에 <code>terminal font size</code> → <strong>16</strong> 정도
+   - 에디터 글씨(<code>editor font size</code>)와 <strong>따로</strong> 설정해야 합니다. Claude Code는 터미널에서 돌기 때문에 터미널 글씨가 더 중요합니다</li>
+</ol>
+</section><section class="sec" id="s-7-시험-질문-1개-2분"><h2 id="7-시험-질문-1개-2분">7. 시험 질문 1개 (2분)</h2>
+<p>VS Code 터미널에서 <code>claude</code> 를 실행하고 아래처럼 물어봅니다.</p>
+<pre><code>이 폴더에 어떤 파일이 있는지 알려줘
+</code></pre>
+<ul>
+<li>엑셀·twbx 파일 이름이 답에 나오면 <strong>준비 완료</strong>입니다</li>
+<li>엉뚱한 폴더 파일이 나오면 → 2번(폴더 열기)부터 다시</li>
+<li>확인했으면 <code>/exit</code> 로 나옵니다. 8번은 Claude Code 밖, 그냥 터미널에서 합니다</li>
+</ul>
+</section><section class="sec" id="s-8-파이썬-엑셀-패키지-10분"><h2 id="8-파이썬-엑셀-패키지-10분">8. 파이썬 + 엑셀 패키지 (10분)</h2>
+<p>11월 04일 실습에서 Claude Code가 엑셀을 읽어 집계할 때 <strong>파이썬</strong>과 <strong><code>pandas</code>·<code>openpyxl</code></strong> 을 씁니다.
+Windows는 <code>python</code>, Mac은 <strong><code>python3</code></strong> 입니다. 이 차이만 기억하면 나머지는 같습니다.</p>
+<div class="sub"><h3 id="8-1-이미-있는지-먼저-확인">8-1. 이미 있는지 먼저 확인</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Windows</th>
+<th>Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python --version</code></td>
+<td><code>python3 --version</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong><code>Python 3.10</code> 이상</strong>의 버전 숫자가 나오면 → 8-3으로 건너뜁니다</li>
+<li>숫자가 안 나오면 → 8-2로</li>
+</ul>
+</div><div class="sub"><h3 id="8-2-설치">8-2. 설치</h3>
+<p><strong>Windows</strong></p>
+<ol>
+<li>VS Code 터미널에 입력 → <code>Enter</code>
+   <code>powershell
+   winget install Python.Python.3.12</code>
+   - 「이 앱이 디바이스를 변경하도록 허용하시겠어요?」 → <strong>예</strong></li>
+<li><strong>VS Code를 완전히 종료했다가 다시 실행</strong> (꼭 필요) → <code>python --version</code> 다시 확인</li>
+<li><code>winget</code> 이 안 되면 → <code>https://www.python.org/downloads</code> → 「Download Python 3.x」 → 설치 첫 화면에서 <strong>「Add python.exe to PATH」 반드시 체크</strong> → Install Now → VS Code 다시 실행</li>
+</ol>
+<blockquote>
+<p><code>python</code> 을 쳤는데 <strong>Microsoft Store가 열리면</strong> 파이썬이 없는 것입니다. Store에서 설치하지 말고 위 1번으로 설치하세요.</p>
+</blockquote>
+<p><strong>Mac</strong></p>
+<ol>
+<li><code>python3 --version</code> 을 쳤을 때 <strong>「명령어 라인 개발자 도구를 설치하겠습니까?」</strong> 창이 뜨면 → <strong>설치</strong> (5~10분) → 끝나면 <code>python3 --version</code> 다시 확인</li>
+<li>창이 안 뜨고 오류만 나오면 → <code>https://www.python.org/downloads</code> → 「Download Python 3.x」 → 받은 <code>.pkg</code> 실행 → 기본값으로 설치 → <strong>VS Code <code>⌘ + Q</code> 로 종료 후 다시 실행</strong></li>
+</ol>
+</div><div class="sub"><h3 id="8-3-엑셀-패키지-설치">8-3. 엑셀 패키지 설치</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Windows</th>
+<th>Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python -m pip install pandas openpyxl</code></td>
+<td><code>python3 -m pip install pandas openpyxl</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>설치가 끝나면 확인합니다.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Windows</th>
+<th>Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python -c "import pandas, openpyxl; print('pandas OK')"</code></td>
+<td><code>python3 -c "import pandas, openpyxl; print('pandas OK')"</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong><code>pandas OK</code></strong> 가 나오면 준비 끝입니다</li>
+<li>Mac에서 <code>externally-managed-environment</code> 오류가 나오면 → 캡처만 해 두세요. 수업에서 Claude Code로 같이 해결합니다</li>
+<li>회사 PC라 <code>pip</code> 가 인증서·프록시 오류로 막히면 → 캡처해 두세요. 집 PC로 오시거나 수업 시작 전에 도와드립니다</li>
+</ul>
+<blockquote>
+<p>VS Code 확장에서 <strong>「Python」(게시자 Microsoft)</strong> 을 설치하라는 알림이 뜨면 설치해도 됩니다(선택). 확장만으로는 파이썬 본체가 설치되지 않으니 위 8-2는 따로 해야 합니다.</p>
+</blockquote>
+<hr />
+</div></section><section class="sec" id="s-선택-claude-code-확장-프로그램"><h2 id="선택-claude-code-확장-프로그램">선택 — Claude Code 확장 프로그램</h2>
+<p>VS Code 왼쪽 「확장(Extensions)」(<code>Ctrl + Shift + X</code> · Mac <code>⌘ + Shift + X</code>)에서 <strong>「Claude Code」(게시자 Anthropic)</strong> 를 설치해 두면, Claude가 고친 내용을 VS Code의 비교 화면으로 볼 수 있습니다.
+<strong>수업은 터미널로 진행하므로 필수는 아닙니다.</strong> 설치한다면 게시자가 <strong>Anthropic</strong> 인지 꼭 확인하세요 — 이름이 비슷한 다른 확장이 많습니다.</p>
+</section><section class="sec" id="s-막혔을-때"><h2 id="막혔을-때">막혔을 때</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>증상</th>
+<th>원인</th>
+<th>해결</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>claude</code> 를 찾을 수 없다</td>
+<td>VS Code가 설치 전에 열려 있었다</td>
+<td>VS Code <strong>완전히 종료 후 다시 실행</strong></td>
+</tr>
+<tr>
+<td>Windows 터미널에 <code>PS</code> 가 없다</td>
+<td>기본 터미널이 명령 프롬프트</td>
+<td>3번 표대로 PowerShell 선택</td>
+</tr>
+<tr>
+<td>Windows에서 「이 시스템에서 스크립트를 실행할 수 없으므로…」</td>
+<td>PowerShell 실행 정책</td>
+<td>화면을 캡처해 두세요. 수업 시작 전에 같이 바꿉니다</td>
+</tr>
+<tr>
+<td>Mac에서 「"터미널"(또는 "Code")이 폴더에 접근하려고 합니다」</td>
+<td>macOS 권한 확인</td>
+<td><strong>허용</strong>. 거부했다면 「시스템 설정 → 개인정보 보호 및 보안 → 파일 및 폴더」에서 켜기</td>
+</tr>
+<tr>
+<td><code>/status</code> 가 개인 계정</td>
+<td>다른 계정으로 로그인</td>
+<td><code>/logout</code> 후 Team 조직으로 다시 로그인</td>
+</tr>
+<tr>
+<td>파이썬을 설치했는데 <code>python</code> 을 못 찾는다</td>
+<td>VS Code가 설치 전에 열려 있었다</td>
+<td>VS Code <strong>완전히 종료 후 다시 실행</strong></td>
+</tr>
+<tr>
+<td>Mac에서 <code>python: command not found</code></td>
+<td>Mac은 이름이 다르다</td>
+<td><strong><code>python3</code></strong> 로 입력</td>
+</tr>
+<tr>
+<td>엑셀 한글이 깨져 보인다 (Windows)</td>
+<td>콘솔 인코딩</td>
+<td><code>python -X utf8 ...</code> 으로 실행</td>
+</tr>
+<tr>
+<td>회사 PC라 VS Code 설치가 막힌다</td>
+<td>회사 보안 정책</td>
+<td>터미널(PowerShell·Mac 터미널)만으로도 수업은 됩니다. 파일은 탐색기·Finder로 확인</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class="sec" id="s-하지-말-것"><h2 id="하지-말-것">하지 말 것</h2>
+<ul>
+<li>❌ 바탕화면·다운로드 폴더를 연 채로 <code>claude</code> 실행 — <strong>항상 작업 폴더를 먼저 연다</strong></li>
+<li>❌ 게시자가 Anthropic이 아닌 「Claude」 확장 설치</li>
+<li>❌ Claude Code에 <strong>개인 계정</strong>으로 로그인</li>
+<li>❌ 터미널 화면 캡처를 올릴 때 <strong>토큰·Webhook 주소·비밀번호</strong>가 보이는 채로 공유</li>
+</ul></section>
+</main>
+<footer>S.T.A Track 3기 9주차 수강생용 · 기준 2026.11.02 · 수업 중 바뀌는 내용은 강사 안내를 따릅니다</footer>
+<script>
+const links=[...document.querySelectorAll('nav.tabs a')];const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(s=>io.observe(s));
+document.querySelectorAll('pre').forEach(pre=>{const b=document.createElement('button');b.className='cp';b.type='button';b.textContent='복사';
+b.onclick=async()=>{try{await navigator.clipboard.writeText(pre.innerText.replace(/\n?복사(됨)?$/,''));b.textContent='복사됨';setTimeout(()=>b.textContent='복사',1500)}catch(e){b.textContent='직접 선택'}};pre.appendChild(b)});
+</script>
+</body>
+</html>

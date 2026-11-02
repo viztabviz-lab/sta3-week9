@@ -1,0 +1,25 @@
+{
+  "text": "{주체} 매출 {증감률} — 주간 지표",
+  "blocks": [
+    {
+      "type": "header",
+      "text": { "type": "plain_text", "text": "{주체} 매출 {증감률} 전주 대비", "emoji": true }
+    },
+    {
+      "type": "section",
+      "fields": [
+        { "type": "mrkdwn", "text": "*매출*\n{매출} 원  {매출증감}" },
+        { "type": "mrkdwn", "text": "*주문 수*\n{주문수} 건  {주문증감}" },
+        { "type": "mrkdwn", "text": "*이익률*\n{이익률}  {이익률증감}" },
+        { "type": "mrkdwn", "text": "*가장 내린 카테고리*\n{하락카테고리}  {하락폭}" }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "context",
+      "elements": [
+        { "type": "mrkdwn", "text": "출처 {출처} · 기준일 {기준일} · 집계 {집계기간}" }
+      ]
+    }
+  ]
+}
